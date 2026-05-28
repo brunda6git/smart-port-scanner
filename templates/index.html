@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Port Scanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Animated background grid -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+
+    <div class="terminal-wrapper">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <circle cx="14" cy="14" r="12" stroke="#00ff88" stroke-width="1.5" stroke-dasharray="4 2"/>
+                    <circle cx="14" cy="14" r="7" stroke="#00ff88" stroke-width="1" opacity="0.6"/>
+                    <circle cx="14" cy="14" r="2.5" fill="#00ff88"/>
+                    <line x1="14" y1="2" x2="14" y2="6" stroke="#00ff88" stroke-width="1.5"/>
+                    <line x1="14" y1="22" x2="14" y2="26" stroke="#00ff88" stroke-width="1.5"/>
+                    <line x1="2" y1="14" x2="6" y2="14" stroke="#00ff88" stroke-width="1.5"/>
+                    <line x1="22" y1="14" x2="26" y2="14" stroke="#00ff88" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div>
+                <h1 class="title">SMART PORT SCANNER</h1>
+                <p class="subtitle">TCP RECONNAISSANCE TOOL <span class="version-tag">v2.0</span></p>
+            </div>
+            <div class="status-dot-wrap">
+                <span class="status-dot"></span>
+                <span class="status-label" id="statusLabel">READY</span>
+            </div>
+        </header>
+
+        <!-- Main panel -->
+        <div class="panel">
+
+            <!-- Top bar -->
+            <div class="panel-bar">
+                <span class="bar-text">TARGET CONFIGURATION</span>
+                <span class="bar-dots"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Inputs -->
+            <div class="inputs-section">
+                <div class="input-group full-width">
+                    <label class="input-label">
+                        <span class="label-prefix">01</span> TARGET HOST
+                    </label>
+                    <div class="input-wrap">
+                        <span class="input-icon">⌘</span>
+                        <input type="text" id="target" placeholder="192.168.1.1 or hostname" autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label class="input-label">
+                            <span class="label-prefix">02</span> START PORT
+                        </label>
+                        <div class="input-wrap">
+                            <input type="number" id="startPort" placeholder="1" min="1" max="65535">
+                        </div>
+                    </div>
+                    <div class="range-divider">→</div>
+                    <div class="input-group">
+                        <label class="input-label">
+                            <span class="label-prefix">03</span> END PORT
+                        </label>
+                        <div class="input-wrap">
+                            <input type="number" id="endPort" placeholder="1024" min="1" max="65535">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="btn-group">
+                <button class="btn-wellknown" onclick="useWellKnownPorts()">
+                    <span class="btn-icon">⚡</span>
+                    <span>WELL-KNOWN PORTS</span>
+                </button>
+                <button class="btn-scan" id="scanBtn" onclick="scanPorts()">
+                    <span class="btn-scan-inner">
+                        <span class="scan-icon">▶</span>
+                        <span id="scanBtnText">SCAN PORTS</span>
+                    </span>
+                    <span class="btn-scan-glow"></span>
+                </button>
+            </div>
+
+            <!-- Progress -->
+            <div id="progressContainer" class="progress-section hidden">
+                <div class="progress-meta">
+                    <span class="progress-status">
+                        <span class="pulse-dot"></span>
+                        <span id="progressText">SCANNING</span>
+                    </span>
+                    <span id="progressPercent" class="progress-pct">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressBar"></div>
+                    <div class="progress-shine"></div>
+                </div>
+                <div class="progress-counters">
+                    <span id="scannedCount">0</span> / <span id="totalCount">0</span> ports scanned
+                </div>
+            </div>
+        </div>
+
+        <!-- Results panel -->
+        <div class="results-panel" id="resultsPanel">
+            <div class="panel-bar">
+                <span class="bar-text">SCAN RESULTS</span>
+                <span id="openCount" class="count-badge">—</span>
+            </div>
+            <div id="result" class="result-body">
+                <div class="idle-state">
+                    <div class="idle-icon">◎</div>
+                    <p>Awaiting scan target...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span>TCP CONNECT SCAN</span>
+            <span class="sep">|</span>
+            <span>MAX 10,000 PORTS</span>
+            <span class="sep">|</span>
+            <span>200 THREADS</span>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
