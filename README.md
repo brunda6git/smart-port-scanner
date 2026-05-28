@@ -183,7 +183,7 @@ This tool is built for **educational purposes only** as part of a college mini p
 
 ## 👨‍💻 Author
 
-Made for a network security mini project.
+Made for a Information Network Security mini project.
 
 ---
 
