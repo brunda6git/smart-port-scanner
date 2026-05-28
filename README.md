@@ -1,13 +1,3 @@
-
-
-███████╗███╗   ███╗ █████╗ ██████╗ ████████╗    ██████╗  ██████╗ ██████╗ ████████╗    ███████╗ ██████╗ █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗
-██╔════╝████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝    ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝    ██╔════╝██╔════╝██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗
-███████╗██╔████╔██║███████║██████╔╝   ██║       ██████╔╝██║   ██║██████╔╝   ██║       ███████╗██║     ███████║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝
-╚════██║██║╚██╔╝██║██╔══██║██╔══██╗   ██║       ██╔═══╝ ██║   ██║██╔══██╗   ██║       ╚════██║██║     ██╔══██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗
-███████║██║ ╚═╝ ██║██║  ██║██║  ██║   ██║       ██║     ╚██████╔╝██║  ██║   ██║       ███████║╚██████╗██║  ██║██║ ╚████║██║ ╚████║███████╗██║  ██║
-╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝       ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
-
-
 <div align="center">
 
 ```
@@ -81,16 +71,16 @@ Built as a semester mini project to demonstrate concepts in **network security**
 ```
 smart-port-scanner/
 │
-├── app.py                  ← Flask backend (main file)
-├── requirements.txt        ← Python dependencies
+├── app.py                  
+├── requirements.txt        
 ├── README.md
 │
 ├── templates/
-│   └── index.html          ← Frontend HTML
+│   └── index.html          
 │
 └── static/
-    ├── style.css           ← Cyberpunk UI styles
-    └── script.js           ← Frontend logic + SSE handling
+    ├── style.css           
+    └── script.js           
 ```
 
 ---
@@ -193,7 +183,7 @@ This tool is built for **educational purposes only** as part of a college mini p
 
 ## 👨‍💻 Author
 
-Made with ❤️ for a network security mini project.
+Made for a network security mini project.
 
 ---
 
