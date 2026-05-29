@@ -196,7 +196,7 @@ This tool is built for **educational purposes only** as part of a college mini p
 ## Contributors
 
 | Name | USN | Role |
-|------|------|
+|------|------|------|
 | Brunda Gunaga | 1DT24CY008 | Backend, Deployment |
 | K Lasya | 1DT24CY015 | Frontend UI |
 | Varsha Sheshadri | 1DT24CY043 | Documentation |
