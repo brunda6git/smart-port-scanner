@@ -193,6 +193,17 @@ This tool is built for **educational purposes only** as part of a college mini p
 
 ---
 
+## Contributors
+
+| Name | Role |
+|------|------|
+| Brunda Gunaga | Backend, Frontend UI, Deployment |
+| K Lasya | Frontend Design (HTML/CSS) |
+| Varsha Sheshadri | Documentation |
+| Namratha | Testing |
+
+---
+
 ## Author
 
 Made for Information Network Security mini project.
