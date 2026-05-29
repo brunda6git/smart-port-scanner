@@ -19,6 +19,8 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-00d4ff?style=for-the-badge&logo=render&logoColor=white)](https://smart-port-scanner-n2sp.onrender.com)
+
 </div>
 
 ---
@@ -47,7 +49,9 @@ Built as a semester mini project to demonstrate concepts in **network security**
 
 ## 🖥️ Screenshots
 
-> *(Add screenshots here after running the project)*
+![Home](screenshots/home.png)
+![Well Known Ports](screenshots/wellknown.png)
+![Scan Results](screenshots/results.png)
 
 ---
 
@@ -71,16 +75,24 @@ Built as a semester mini project to demonstrate concepts in **network security**
 ```
 smart-port-scanner/
 │
-├── app.py                  
-├── requirements.txt        
-├── README.md
+├── app.py
+├── requirements.txt
+├── render.yaml              
+├── .gitignore              
+├── README.md                
+│
+├── screenshots/             
+│   ├── home.png
+│   ├── wellknown.png
+│   └── results.png
 │
 ├── templates/
-│   └── index.html          
+│   └── index.html
 │
 └── static/
-    ├── style.css           
-    └── script.js           
+    ├── style.css
+    └── script.js
+           
 ```
 
 ---
